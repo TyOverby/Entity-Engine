@@ -1,0 +1,54 @@
+
+
+Definitions
+    " Frame: The current "step" of the game.  These frames
+    " occur at pre-determined intervals, (for instance, 5 times
+    " per second).
+
+    " Update: A network update that is either:
+        1. Message: An update originally sent from another client. \
+          \ These are supposed to be incremental updates that are \
+          \ independant from the actual gamestate.
+        2. State-Update: An update sent from the server to the clients \
+          \ that contains the entire game state.
+
+Network Stack
+    * The server tells everyone what Frame they are on.
+    * Both the server and the client increment the "frame" at the same intervals
+    * The server sends two types of updates:
+        1. Message
+        2. State update
+    * The client can do processing more than once per frame, but once it \
+     \ recieves an update from the server, the extra processing is discarded \
+     \ and the messages that it has recieved since the last update are applied
+
+    `  c s
+    `  o o
+    `  |/|
+    `  o |
+    `  | o
+    `  o/|
+    `  | |
+    `  o o
+    `  |/|
+    `  o |
+    `  | o
+    `  o/|
+    `  | |
+    `  o o
+
+    """ what is happening | what the server does | what the client does
+    """ Clients get a message | \
+        \ The server routed messages to the clients with the number indicating
+        \ the frame that it was recieved.  | \
+        \ The client takes the message, and if it was sent after they got the last \
+        \ State Update, then it is applied to the current state.  Otherwise, it is \
+        \ discarded. It then stores the message in order to apply it to the next update \
+        \ (if it ends up working like that)
+    """ Clients get a State Update | \
+        \ The server stops applying messages, and serializes the gamestate. Distributes \
+        \ UDP.  Does this every "frame".
+
+
+
+
