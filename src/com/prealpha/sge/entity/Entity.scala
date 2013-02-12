@@ -1,11 +1,11 @@
-package com.prealpha.sge.components
+package com.prealpha.sge.entity
 
 import com.prealpha.sge.messages.UpdateMessage
 
 /**
  * Everything in the game is a Entity.  What makes
  * different GameObjects special is that they mixin
- * Components.  These components define the properties
+ * Components.  These entity define the properties
  * that make up the Entity.
  *
  * This constructor should be used on the client.
@@ -26,4 +26,6 @@ abstract class Entity(val id: Int){
     def toString = "Entity id: " + id
 
     def handleMessage(message: UpdateMessage)
+
+    def update(deltaM: Long){}
 }

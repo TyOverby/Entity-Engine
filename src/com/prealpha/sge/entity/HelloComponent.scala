@@ -1,12 +1,13 @@
-package com.prealpha.sge.components
+package com.prealpha.sge.entity
 
 import com.prealpha.sge.messages.Message
+import com.prealpha.sge.logic.Frame
 
 trait HelloComponent extends Component{
     var word = "hello"
 
     abstract override
-    def update(deltaM: Int){
+    def update(deltaM: Long){
         println(word)
 
         super.update(deltaM)
@@ -17,4 +18,4 @@ trait HelloComponent extends Component{
     }
 }
 
-case class HelloMessage(newWord: String) extends Message
+case class HelloMessage(newWord: String, frame: Frame) extends Message

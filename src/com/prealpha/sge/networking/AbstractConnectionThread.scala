@@ -24,12 +24,6 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
     var running = false
 
 
-    /**
-     * When a message is found, it will be passed on to this
-     * function in order to be read and handled somewhere
-     * @param message The incoming message to be handled
-     */
-    def handleMessage(message: Message)
 
     /**
      * A callback to be called when the game is closed
@@ -44,7 +38,7 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
         try {
             while(running){
                 val msg = in.readObject().asInstanceOf[Message]
-                handleMessage(msg)
+                //handleMessage(msg)
             }
         }
         catch {
@@ -53,7 +47,7 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
             // This happens if "they" kill the connection while still trying to read
             case e: SocketException => this.close(e)
             // Oh god, what is happening, make it stop!
-            case e: Throwable       => e.printStackTrace()
+            case e: Throwable       => log.trace(e)
         }
         finally {
             running = false
@@ -71,6 +65,8 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
      */
     def write(message: Message){
         out.writeObject(message)
+    }
+    def flush(){
         out.flush()
     }
 

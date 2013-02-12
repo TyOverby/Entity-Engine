@@ -1,4 +1,4 @@
-package com.prealpha.sge.components
+package com.prealpha.sge.entity
 
 
 /**
@@ -13,5 +13,6 @@ trait ComponentCap extends Entity{
      * @param deltaM The time (in milliseconds) since
      *               the last update.
      */
-    def update(deltaM: Int){}
+    abstract override
+    def update(deltaM: Long){}
 }

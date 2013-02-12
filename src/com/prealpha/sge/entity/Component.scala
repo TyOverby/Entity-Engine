@@ -1,12 +1,12 @@
-package com.prealpha.sge.components
+package com.prealpha.sge.entity
 
 /**
- * All Game Objects are built out of components.
+ * All Game Objects are built out of entity.
  * Each component stores its own data, and can access
- * data in other components by the properties of mixins.
+ * data in other entity by the properties of mixins.
  *
  * Therefore, Components can modify the values that actually
- * belong in other components, so beware!
+ * belong in other entity, so beware!
  */
 trait Component extends ComponentCap{
 
@@ -17,5 +17,6 @@ trait Component extends ComponentCap{
      * @param deltaM The time in milliseconds since the last
      *               call to update.
      */
-    def update(deltaM: Int): Unit
+    abstract override
+    def update(deltaM: Long): Unit
 }

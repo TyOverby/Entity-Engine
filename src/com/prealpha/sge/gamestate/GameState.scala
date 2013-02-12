@@ -15,27 +15,35 @@ trait GameState {
 
 trait ServerGameState extends GameState {
     def allowUser(user: ToUserConnection): Boolean
+    def fromUserUpdate(user: ToUserConnection, message: Message)
 
     val connectionPool = new ConnectionPool {
         def allowConnection(u: ToUserConnection) = allowUser(u)
+        def onPlayerUpdate(user: ToUserConnection, message: Message) = fromUserUpdate(user, message)
     }
 }
 
-trait ClientGameState extends GameState {
-    var serverConnection: Option[ToServerConnection] = None
+abstract class ClientGameState(serverTarget: String) extends GameState {
+    lazy val serverConnection: ToServerConnection = connect(serverTarget)
 
-    def connect(target: String){
+    def handleMessage(m: Message)
+    def onClose()
+
+    def connect(target: String) = {
         val ss = new ToServerConnection(target){
-            override def handleMessage(message: Message) = message match {
-                case GoodbyeMessage    => this.close()
-                case m: UpdateMessage  => actors.passMessage(m)
-                case CreateMessage(e)  => actors.add(e)
-                case x                 => throw new IllegalArgumentException("Unknown message: " + x.toString)
+            override def handleMessage(message: Message) {
+                message match {
+                    case GoodbyeMessage => this.close()
+                    // pass it off to the inheriting method
+                    case x => ClientGameState.this.handleMessage(x)
+                }
             }
 
-            //TODO: fill this out
-            override def onClose() {}
+            override def onClose() {
+                ClientGameState.this.onClose()
+            }
         }
-        serverConnection = Some(ss)
+        ss.start()
+        ss
     }
 }

@@ -9,7 +9,4 @@ abstract class ToServerConnection(address: String) extends AbstractConnectionThr
     new Socket(address, AbstractConnectionThread.Port)) {
 
     log.info("CLIENT-> New connection with server")
-
-    def handleMessage(message: Message)
-    def onClose()
 }

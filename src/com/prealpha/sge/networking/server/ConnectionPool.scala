@@ -100,4 +100,11 @@ abstract class ConnectionPool extends Thread{
      * @return If the user is allowed to actually connect
      */
     def allowConnection(user: ToUserConnection): Boolean
+
+    def onPlayerUpdate(user: ToUserConnection, message: Message)
+
+    def registerMessage(user: ToUserConnection, message: Message){
+        broadcast(message)
+        onPlayerUpdate(user, message)
+    }
 }

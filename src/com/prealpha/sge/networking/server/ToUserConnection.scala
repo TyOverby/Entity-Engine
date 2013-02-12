@@ -9,6 +9,7 @@ class ToUserConnection(socket: Socket, pool: ConnectionPool) extends AbstractCon
     def handleMessage(message: Message) {
         message match {
             case GoodbyeMessage => this.close()
+            case x: Message     => pool.registerMessage(this,x)
         }
     }
 
