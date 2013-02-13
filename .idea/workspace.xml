@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9336124d-7cdd-4037-8810-eadb611f60ae" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\components\Component.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\components\ComponentCap.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\components\Entity.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\components\HelloComponent.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\components\WorldComponent.scala" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/logic/GameState.scala" />
+      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\gamestate\GameState.scala" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/data/ActorCollection.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/data/ActorCollection.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/gamestate/GameState.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/gamestate/GameState.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/prealpha/sge/networking/ConnectionPoolStopTest.scala" afterPath="$PROJECT_DIR$/test/com/prealpha/sge/networking/ConnectionPoolStopTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/prealpha/sge/networking/ServerNetworkTest.scala" afterPath="$PROJECT_DIR$/test/com/prealpha/sge/networking/ServerNetworkTest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala" afterPath="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/notes.txt" afterPath="$PROJECT_DIR$/notes.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ScalaGE.iws" />
@@ -34,10 +32,10 @@
     <file path="/ComponentRip.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359615970950" ignored="false" />
     <file path="/ActorCollection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360136141692" ignored="false" />
     <file path="/a.dummy" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359947870352" ignored="false" />
-    <file path="/GameState.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360655359500" ignored="false" />
-    <file path="/AbstractConnectionThread.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360656366668" ignored="false" />
+    <file path="/GameState.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360741984319" ignored="false" />
+    <file path="/AbstractConnectionThread.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360657726713" ignored="false" />
     <file path="/UserConnection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359710969917" ignored="false" />
-    <file path="/ConnectionPool.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360655298886" ignored="false" />
+    <file path="/ConnectionPool.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360741583545" ignored="false" />
     <file path="/package.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359867000161" ignored="false" />
     <file path="/ToServerConnection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359941561911" ignored="false" />
     <file path="/Latex.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359858627848" ignored="false" />
@@ -49,20 +47,23 @@
     <file path="$PROJECT_DIR$/../Aztec/src/com/prealpha/aztec/Token.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360220942877" ignored="false" />
     <file path="/Token.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360220942333" ignored="false" />
     <file path="$PROJECT_DIR$/test/com/prealpha/sge/package.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359866245804" ignored="false" />
-    <file path="/ServerNetworkTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359868787880" ignored="false" />
+    <file path="/ServerNetworkTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360661618964" ignored="false" />
     <file path="/Logger.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359938371924" ignored="false" />
     <file path="/ClientNetworkTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359868426705" ignored="false" />
-    <file path="/ToUserConnection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360655081192" ignored="false" />
-    <file path="/ConnectionPoolStopTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359938032679" ignored="false" />
+    <file path="/ToUserConnection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360657739231" ignored="false" />
+    <file path="/ConnectionPoolStopTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360741596384" ignored="false" />
     <file path="/Entity.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359950482321" ignored="false" />
     <file path="/fragment.java" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359945346152" ignored="false" />
     <file path="/Game.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1359951625005" ignored="false" />
     <file path="/Frame.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360649682855" ignored="false" />
-    <file path="/ClientGame.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360650748894" ignored="false" />
+    <file path="/ClientGame.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360743881734" ignored="false" />
     <file path="/Dummy.txt" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360648810149" ignored="false" />
     <file path="/ServerState.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360654903570" ignored="false" />
-    <file path="/ServerGame.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360655433372" ignored="false" />
+    <file path="/ServerGame.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360745842916" ignored="false" />
     <file path="/AbstractListener.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360656657897" ignored="false" />
+    <file path="/Listener.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360657681145" ignored="false" />
+    <file path="/notes.txt" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360658249283" ignored="false" />
+    <file path="/ClientState.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1360659849013" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,105 +116,168 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf>
+                <file leaf-file-name="ToServerConnection.scala" pinned="false" current="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="12" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="ToUserConnection.scala" pinned="false" current="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="14" column="5" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="ConnectionPool.scala" pinned="false" current="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="13" column="59" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+                        <folding>
+                          <element signature="e#44#80#0" expanded="true" />
+                          <element signature="e#477#563#0" expanded="false" />
+                          <element signature="e#602#670#0" expanded="false" />
+                          <element signature="e#750#827#0" expanded="false" />
+                          <element signature="docComment;method#removeUserConnection#0" expanded="false" />
+                          <element signature="docComment;method#stopAccepting#0" expanded="false" />
+                          <element signature="docComment;method#kill#0" expanded="false" />
+                          <element signature="docComment;method#broadcast#0" expanded="false" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="ServerGame.scala" pinned="false" current="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="22" column="0" selection-start="515" selection-end="515" vertical-scroll-proportion="0.3908046">
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file leaf-file-name="Listener.scala" pinned="false" current="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="14" column="5" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+                        <folding />
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="ClientGame.scala" pinned="false" current="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="29" column="8" selection-start="641" selection-end="641" vertical-scroll-proportion="0.46185997">
+                        <folding>
+                          <element signature="docComment;method#runUpdates#0" expanded="false" />
+                          <element signature="docComment;method#microSequence#0" expanded="false" />
+                          <element signature="docComment;method#onStateUpdate#0" expanded="false" />
+                          <element signature="docComment;method#loop#0" expanded="false" />
+                          <element signature="docComment;method#start#0" expanded="false" />
+                          <element signature="docComment;method#stop#0" expanded="false" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file leaf-file-name="GameState.scala" pinned="false" current="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/GameState.scala">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state line="10" column="8" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+                        <folding>
+                          <element signature="e#32#76#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ScalaGE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6014398">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="GameState.scala" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/gamestate/GameState.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="40" selection-start="401" selection-end="401" vertical-scroll-proportion="0.32578397">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ClientGame.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="39" column="5" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="docComment;method#sendMessages#0" expanded="false" />
-                    <element signature="docComment;method#runUpdates#0" expanded="false" />
-                    <element signature="docComment;method#microSequence#0" expanded="false" />
-                    <element signature="docComment;method#onStateUpdate#0" expanded="false" />
-                    <element signature="docComment;method#loop#0" expanded="false" />
-                    <element signature="docComment;method#start#0" expanded="false" />
-                    <element signature="docComment;method#stop#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConnectionPool.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="104" column="0" selection-start="3179" selection-end="3179" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AbstractConnectionThread.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#37#78#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ToUserConnection.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="11" column="55" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ServerGame.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="6" column="37" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="ServerGame.scala" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="21" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <element signature="e#32#81#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Listener.scala" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="28" selection-start="376" selection-end="376" vertical-scroll-proportion="0.5714286">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="notes.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="11" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerNetworkTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/prealpha/sge/networking/ServerNetworkTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="52" selection-start="271" selection-end="319" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionPoolStopTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/prealpha/sge/networking/ConnectionPoolStopTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="10" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#37#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerGame.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="22" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Frame.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="51" selection-start="326" selection-end="404" vertical-scroll-proportion="0.425">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -231,30 +295,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/components/WorldComponent.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/Game.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/data/ActorCollection.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/entity/WorldComponent.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/entity/HelloComponent.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerState.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/sge/gamestate/GameState.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractListener.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala" />
+        <option value="$PROJECT_DIR$/notes.txt" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientState.scala" />
+        <option value="$PROJECT_DIR$/test/com/prealpha/sge/networking/ServerNetworkTest.scala" />
+        <option value="$PROJECT_DIR$/test/com/prealpha/sge/networking/ConnectionPoolStopTest.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/GameState.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-1448" />
+    <option name="y" value="172" />
+    <option name="width" value="1456" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -331,11 +395,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sge" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -379,6 +439,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Message.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ScalaGE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -401,8 +487,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gamestate" />
+              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameState.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -613,7 +703,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <frame x="-1448" y="172" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,13 +715,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30868167" sideWeight="0.49791667" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33440515" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4873838" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20416667" sideWeight="0.6655949" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22841966" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27222222" sideWeight="0.5126162" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3373174" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.77158034" order="2" side_tool="false" content_ui="combo" />
@@ -698,35 +788,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="70" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/scala/src/scala-library-src.jar!/scala/collection/TraversableLike.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="6" selection-start="18732" selection-end="18732" vertical-scroll-proportion="1.845339" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="315" selection-end="323" vertical-scroll-proportion="0.23092999" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/entity/ComponentCap.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="6" selection-start="139" selection-end="139" vertical-scroll-proportion="0.13120176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/entity/Component.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="301" selection-end="301" vertical-scroll-proportion="0.1874311">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/data/ActorCollection.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="34" selection-start="797" selection-end="797" vertical-scroll-proportion="0.44983461">
@@ -743,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="32" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/entity/WorldComponent.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="28" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
@@ -759,41 +813,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="55" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/AbstractConnectionThread.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
+        <state line="79" column="35" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.62857145">
           <folding>
             <element signature="e#37#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/prealpha/sge/networking/ConnectionPoolStopTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#37#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/prealpha/sge/networking/ServerNetworkTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="52" selection-start="271" selection-end="319" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/client/ToServerConnection.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ToUserConnection.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/server/ConnectionPool.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="3179" selection-end="3179" vertical-scroll-proportion="0.0">
+        <state line="13" column="59" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#44#80#0" expanded="true" />
+            <element signature="e#477#563#0" expanded="false" />
+            <element signature="e#602#670#0" expanded="false" />
+            <element signature="e#750#827#0" expanded="false" />
+            <element signature="docComment;method#removeUserConnection#0" expanded="false" />
+            <element signature="docComment;method#stopAccepting#0" expanded="false" />
+            <element signature="docComment;method#kill#0" expanded="false" />
+            <element signature="docComment;method#broadcast#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/GameState.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#32#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/messages/Message.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="11" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ClientGame.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="5" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+        <state line="29" column="8" selection-start="641" selection-end="641" vertical-scroll-proportion="0.46185997">
           <folding>
-            <element signature="docComment;method#sendMessages#0" expanded="false" />
             <element signature="docComment;method#runUpdates#0" expanded="false" />
             <element signature="docComment;method#microSequence#0" expanded="false" />
             <element signature="docComment;method#onStateUpdate#0" expanded="false" />
@@ -804,16 +912,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/networking/Listener.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/ServerGame.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="376" selection-end="376" vertical-scroll-proportion="0.5714286">
+        <state line="24" column="22" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/gamestate/GameState.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/sge/logic/Frame.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="40" selection-start="401" selection-end="401" vertical-scroll-proportion="0.32578397">
+        <state line="9" column="51" selection-start="326" selection-end="404" vertical-scroll-proportion="0.425">
           <folding />
         </state>
       </provider>

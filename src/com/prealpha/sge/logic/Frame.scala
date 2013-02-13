@@ -1,8 +1,5 @@
 package com.prealpha.sge.logic
 
-object Frame{
-    val updateRate = 1.0 / 5.0
-}
 case class Frame(frameNumber: Int, millis: Long) extends Ordered[Frame] {
     def toMillis:Long = (millis + frameNumber * (1.0/Frame.updateRate)).toLong
 

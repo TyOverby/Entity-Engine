@@ -10,26 +10,23 @@ object AbstractConnectionThread{
     val Port = 8008
 }
 
-abstract class AbstractConnectionThread(socket: Socket) extends Thread{
+class AbstractConnectionThread(socket: Socket) extends Thread{
     /**
      * Input and output streams are used for communication with the
      * Socket
      */
-    val out = new ObjectOutputStream(socket.getOutputStream)
-    val in  = new ObjectInputStream(socket.getInputStream)
+    private[this] val out = new ObjectOutputStream(socket.getOutputStream)
+    private[this] val in  = new ObjectInputStream(socket.getInputStream)
 
     /**
      * If the loop is running looking for more messages
      */
-    var running = false
+    private[this] var running = false
 
+    val messageListener = new Listener[Message]
+    val closeListener   = new NoListener
 
-
-    /**
-     * A callback to be called when the game is closed
-     */
-    def onClose()
-
+    private[this] var closed = false
 
     override def run(){
         setName(f"${getClass.getSimpleName} [${socket.getRemoteSocketAddress}]")
@@ -38,7 +35,7 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
         try {
             while(running){
                 val msg = in.readObject().asInstanceOf[Message]
-                //handleMessage(msg)
+                messageListener.handle(msg)
             }
         }
         catch {
@@ -50,11 +47,13 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
             case e: Throwable       => log.trace(e)
         }
         finally {
-            running = false
+            if (!closed){
+                running = false
 
-            out.close()
-            in.close()
-            socket.close()
+                out.close()
+                in.close()
+                socket.close()
+            }
         }
     }
 
@@ -76,7 +75,9 @@ abstract class AbstractConnectionThread(socket: Socket) extends Thread{
     def close(){
         log.info("connection closed from a " + this.getClass.getSimpleName)
         running = false
+        closed = true
         this.socket.close()
+        this.closeListener.handle()
     }
     protected def close(reason: Exception){
         log.trace(reason)

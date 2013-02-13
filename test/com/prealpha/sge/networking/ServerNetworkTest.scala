@@ -7,15 +7,10 @@ import com.prealpha.sge.messages.Message
 
 object ServerNetworkTest extends App {
 
-    val server = new ConnectionPool {
-        def allowConnection(user: ToUserConnection): Boolean = false
-    }
+    val server = new ConnectionPool(_=>true)
 
     server.start()
-    val client = new ToServerConnection("localhost"){
-        def handleMessage(message: Message) {}
+    val client = new ToServerConnection("localhost")
 
-        def onClose() {}
-    }
     client.start()
 }

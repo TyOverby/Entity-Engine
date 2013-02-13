@@ -5,7 +5,7 @@ import java.net.Socket
 import com.prealpha.sge.messages.{GoodbyeMessage, Message}
 import com.prealpha.sge.logging.log
 
-abstract class ToServerConnection(address: String) extends AbstractConnectionThread(
+class ToServerConnection(address: String) extends AbstractConnectionThread(
     new Socket(address, AbstractConnectionThread.Port)) {
 
     log.info("CLIENT-> New connection with server")
