@@ -45,7 +45,7 @@ class ClientState(target: String) extends GameState{
         this.toServer.flush()
     }
 
-    def applyMessages(curFrame: Frame){
+    def applyMessages(curFrame: Time){
         def app(queue: LinkedBlockingQueue[UpdateMessage]){
             queue
                 .filter(_.frame > curFrame)

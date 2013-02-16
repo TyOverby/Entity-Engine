@@ -4,13 +4,13 @@ import com.prealpha.sge.messages.SyncMessage
 
 abstract class ServerGame extends ServerState {
     // The amount of frames in one second
-    val rate: Int
+    implicit val rate: FrameRate
 
     def init()
     def update(deltaT: Long)
     def stepPhysics(deltaT: Long)
 
-    var curFrame = new Frame(0,0)
+    var curFrame = 0
 
     private[this] def runUpdates(deltaT: Long){
         actors.par.foreach(_.update(deltaT))
@@ -21,8 +21,7 @@ abstract class ServerGame extends ServerState {
         cPool.broadcast(ser)
     }
 
-
-    private[this] def loop(){}
+    private[this] def loop()(implicit rate: FrameRate){}
 
     @inline
     private[this] def step(deltaT: Long){

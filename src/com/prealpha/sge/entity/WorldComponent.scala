@@ -1,7 +1,6 @@
 package com.prealpha.sge.entity
 
 import com.prealpha.sge.messages.Message
-import com.prealpha.sge.logic.Frame
 
 trait WorldComponent extends Component{
     type M = WorldMessage

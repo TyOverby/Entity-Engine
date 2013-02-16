@@ -1,7 +1,7 @@
 package com.prealpha.sge.entity
 
 import com.prealpha.sge.messages.Message
-import com.prealpha.sge.logic.Frame
+import com.prealpha.sge.logic.Time
 
 trait HelloComponent extends Component{
     var word = "hello"
@@ -18,4 +18,4 @@ trait HelloComponent extends Component{
     }
 }
 
-case class HelloMessage(newWord: String, frame: Frame) extends Message
+case class HelloMessage(newWord: String, frame: Time) extends Message

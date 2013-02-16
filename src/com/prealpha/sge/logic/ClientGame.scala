@@ -7,10 +7,10 @@ abstract class ClientGame(host: String) extends ClientState(host) {
     private[this] var running = false
     private[this] var alreadyInit = false
 
-    private[this] var currentFrame = Frame(0, 0L)
+    implicit val frameRate: FrameRate
 
     // The public accessor for curframe
-    def curFrame = currentFrame
+    def curFrame = 0
 
     def init()
 
