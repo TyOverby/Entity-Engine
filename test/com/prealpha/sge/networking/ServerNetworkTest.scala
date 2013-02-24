@@ -7,7 +7,7 @@ import com.prealpha.sge.messages.Message
 
 object ServerNetworkTest extends App {
 
-    val server = new ConnectionPool(_=>true)
+    val server = new ConnectionPool( _ => true)
 
     server.start()
     val client = new ToServerConnection("localhost")

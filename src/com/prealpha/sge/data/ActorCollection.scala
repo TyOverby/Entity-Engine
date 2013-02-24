@@ -6,12 +6,13 @@ import com.prealpha.sge.messages.UpdateMessage
 import com.prealpha.sge.logging.log
 
 
-class ActorCollection extends mutable.Iterable[Entity]{
+class ActorCollection extends mutable.Iterable[Entity] with Serializable {
     private
-    var actorset = new mutable.LinkedHashMap[Int,Entity]
+    var actorset = new mutable.LinkedHashMap[Int, Entity]
 
     var count: Int = 0
-    val lock = new AnyRef
+    @transient val lock = new AnyRef with Serializable
+
     def fetchId(): Int = lock.synchronized {
         count += 1
         count
@@ -22,20 +23,30 @@ class ActorCollection extends mutable.Iterable[Entity]{
      * has gone terribly wrong, but we will try to agree with the definitive source
      * @param entity The entity to add
      */
-    def add(entity: Entity){
+    def add(entity: Entity): Entity = {
         val key = entity.id
-        if (actorset.contains(key)){
+        if (actorset.contains(key)) {
             log.error(f"actorset already contains key: ${key} for object ${entity.getClass.getSimpleName}.  " +
                 "replacing anyway :[")
         }
         actorset += key -> entity
+
+        entity
     }
+
+    def add(fn: Int => Entity): Entity = {
+        val key = fetchId()
+        val entity = fn(key)
+        add(entity)
+    }
+
+    def get(id: Int): Entity = actorset(id)
 
     /**
      * Removes an entity from the
      * @param id
      */
-    def remove(id: Int){
+    def remove(id: Int): Option[Entity] = {
         actorset.remove(id)
     }
 
@@ -44,9 +55,9 @@ class ActorCollection extends mutable.Iterable[Entity]{
      * correct entity
      * @param m The UpdateMessage to pass along
      */
-    def passMessage(m: UpdateMessage){
+    def passMessage(m: UpdateMessage) {
         val messageId = m.entityId
-        val actor     = actorset(messageId)
+        val actor = actorset(messageId)
         actor.handleMessage(m)
     }
 
@@ -57,7 +68,7 @@ class ActorCollection extends mutable.Iterable[Entity]{
     def iterator: Iterator[Entity] = actorset.valuesIterator
 
 
-    def takeFrom(other: ActorCollection){
+    def takeFrom(other: ActorCollection) {
         this.actorset = other.actorset
     }
 }

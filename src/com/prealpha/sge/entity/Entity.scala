@@ -12,7 +12,7 @@ import com.prealpha.sge.messages.UpdateMessage
  *
  * @param id The identification number for the Entity
  */
-abstract class Entity(val id: Int){
+abstract class Entity(val id: Int) extends Serializable{
 
     /**
      * If you use a Entity in a hash,

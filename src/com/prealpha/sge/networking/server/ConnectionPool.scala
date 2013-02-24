@@ -6,7 +6,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 import java.net.{SocketException, ServerSocket}
 
-import com.prealpha.sge.networking.{AbstractConnectionThread, Listener}
+import com.prealpha.sge.networking.{Publisher, AbstractConnectionThread}
 import com.prealpha.sge.logging.log
 import com.prealpha.sge.messages.{GoodbyeMessage, Message}
 
@@ -20,12 +20,13 @@ class ConnectionPool(allowConnection: ToUserConnection => Boolean) extends Threa
      * The list of users currently connected to the game
      */
     private[this] val userConnections = new ListBuffer[ToUserConnection]()
+    def userCount = userConnections.size
     /**
      * The socket that is currently listening for new connections
      */
     private[this] val serverSocket = new ServerSocket(AbstractConnectionThread.Port)
 
-    val messageListener = new Listener[(ToUserConnection, Message)]
+    val messagePublisher = new Publisher[(ToUserConnection, Message)]
 
     final override def run() {
         running = true
@@ -44,6 +45,7 @@ class ConnectionPool(allowConnection: ToUserConnection => Boolean) extends Threa
                     }
                     else {
                         u.write(GoodbyeMessage)
+                        u.flush()
                         u.close()
                         log.info("SERVER-> client denied")
                     }
@@ -63,6 +65,7 @@ class ConnectionPool(allowConnection: ToUserConnection => Boolean) extends Threa
      */
     def removeUserConnection(userC: ToUserConnection) {
         this.userConnections -= userC
+        log.info("SERVER: server removed user")
     }
 
     /**
@@ -96,6 +99,6 @@ class ConnectionPool(allowConnection: ToUserConnection => Boolean) extends Threa
 
     def registerMessage(user: ToUserConnection, message: Message) {
         broadcast(message)
-        messageListener.handle((user, message))
+        messagePublisher.publish((user, message))
     }
 }

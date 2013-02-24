@@ -6,24 +6,30 @@ import java.util.concurrent.LinkedBlockingQueue
 import com.prealpha.sge.messages.{UpdateMessage, Message}
 import scala.collection.JavaConversions._
 import com.prealpha.sge.networking.server.{ToUserConnection, ConnectionPool}
+import com.prealpha.sge.networking.Observer
 
 abstract class GameState {
     val actors = new ActorCollection
 }
 
 abstract class ServerState extends GameState{
-    def acceptUser: ToUserConnection => Boolean
-    lazy val cPool = new ConnectionPool(acceptUser)
+    def acceptUser(toUser: ToUserConnection): Boolean
+    val cPool = new ConnectionPool(acceptUser)
 
-    cPool.messageListener += {
-        case (user, message) => cPool.broadcast(message)
+    def startConnectionPool(){
+        cPool.start()
     }
 
-
+    cPool.messagePublisher.observe {
+         case (user, message) => cPool.broadcast(message)
+    }
 }
 
 class ClientState(target: String) extends GameState{
-    lazy val toServer = new ToServerConnection(target)
+    val toServer = new ToServerConnection(target)
+    def startConnection(){
+        toServer.start()
+    }
 
     private[this] val outgoingMessages = new LinkedBlockingQueue[Message]()
     private[this] val myMessages = new LinkedBlockingQueue[UpdateMessage]()

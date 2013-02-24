@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="library">
+    <output-path>$PROJECT_DIR$/out/artifacts/library</output-path>
+    <root id="archive" name="library.jar">
+      <element id="module-output" name="ScalaGE" />
+    </root>
+  </artifact>
+</component>

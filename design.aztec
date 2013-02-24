@@ -49,6 +49,10 @@ Network Stack
         \ The server stops applying messages, and serializes the gamestate. Distributes \
         \ UDP.  Does this every "frame".
 
-
+Handshake Protocol
+    " often times before the player is "in game", the game will want to get info about them and
+    " decide if they can even be accepted to the game.
+    " This handshake is done from the server inside of AcceptUser.
+    " From the client, it is handled during the start of the connection.
 
 

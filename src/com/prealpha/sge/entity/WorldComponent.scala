@@ -1,6 +1,7 @@
 package com.prealpha.sge.entity
 
 import com.prealpha.sge.messages.Message
+import com.prealpha.sge.logic.Time
 
 trait WorldComponent extends Component{
     type M = WorldMessage
@@ -18,4 +19,4 @@ trait WorldComponent extends Component{
     }
 }
 
-case class WorldMessage(gravity: Float, frame: Frame) extends Message
+case class WorldMessage(gravity: Float, frame: Time) extends Message

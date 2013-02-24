@@ -23,8 +23,8 @@ class AbstractConnectionThread(socket: Socket) extends Thread{
      */
     private[this] var running = false
 
-    val messageListener = new Listener[Message]
-    val closeListener   = new NoListener
+    val messagePublisher = new Publisher[Message]
+    val closePublisher   = new Publisher[Unit]
 
     private[this] var closed = false
 
@@ -35,7 +35,7 @@ class AbstractConnectionThread(socket: Socket) extends Thread{
         try {
             while(running){
                 val msg = in.readObject().asInstanceOf[Message]
-                messageListener.handle(msg)
+                messagePublisher.publish(msg)
             }
         }
         catch {
@@ -77,7 +77,7 @@ class AbstractConnectionThread(socket: Socket) extends Thread{
         running = false
         closed = true
         this.socket.close()
-        this.closeListener.handle()
+        this.closePublisher.publish()
     }
     protected def close(reason: Exception){
         log.trace(reason)

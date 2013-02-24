@@ -5,28 +5,27 @@ import com.prealpha.sge.data.ActorCollection
 import com.prealpha.sge.logic.Time
 
 
-trait Message{
-    val frame: Time
-}
+trait Message
 
 /**
  * An UpdateMessage is used just for sending messages to
  * an Entities component.
  */
-case class UpdateMessage(entityId: Int, frame: Time) extends Message
+trait UpdateMessage extends Message{
+    val entityId: Int
+    val frame: Time
+}
 
-case class DeleteMessage(id: Int, frame: Time) extends Message
+class DeleteMessage(val id: Int, val frame: Time) extends Message
 
-case class CreateMessage(entity: Entity, frame: Time) extends Message
+class CreateMessage(val entity: Entity, val frame: Time) extends Message
 
 /**
  * HandshakeMessages will be used when a connection
  * is established or disestablished.
  */
 trait HandshakeMessage extends Message
-case object GoodbyeMessage extends HandshakeMessage{
-    val frame = Time(0,0) // they don't actually care at this point
-}
+case object GoodbyeMessage extends HandshakeMessage
 
 /**
  * Used to sync an entire ActorCollection

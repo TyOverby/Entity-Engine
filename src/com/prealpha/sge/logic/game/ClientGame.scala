@@ -1,25 +1,18 @@
-package com.prealpha.sge.logic
+package com.prealpha.sge.logic.game
 
 import com.prealpha.sge.messages.SyncMessage
+import com.prealpha.sge.logic.{Time, FrameRate, ClientState}
 
-abstract class ClientGame(host: String) extends ClientState(host) {
-
-    private[this] var running = false
-    private[this] var alreadyInit = false
-
-    implicit val frameRate: FrameRate
-
-    // The public accessor for curframe
-    def curFrame = 0
-
-    def init()
-
-    def update(deltaT: Long)
-
-    def stepPhysics(deltaT: Long)
+abstract class ClientGame(host: String) extends ClientState(host) with Game {
+    var curFrame = 0
+    var millisSinceUpdate = 0L
 
     def render()
 
+    toServer.messagePublisher.observe {
+        case m: SyncMessage => onStateUpdate(m)
+        case _ =>
+    }
 
     /**
      * Run the update method on all actors in the collection
@@ -38,11 +31,13 @@ abstract class ClientGame(host: String) extends ClientState(host) {
     @inline
     private[this]
     def microSequence(deltaT: Long) {
-        runUpdates(deltaT)
-        update(deltaT)
-        stepPhysics(deltaT)
-        sendMessages()
-        render()
+        actors.synchronized{
+            runUpdates(deltaT)
+            update(deltaT)
+            stepPhysics(deltaT)
+            sendMessages()
+            render()
+        }
     }
 
     /**
@@ -52,7 +47,7 @@ abstract class ClientGame(host: String) extends ClientState(host) {
      */
     private[this]
     def onStateUpdate(syncM: SyncMessage) {
-        val SyncMessage(newActors, newFrame) = syncM
+        val SyncMessage(newActors, time) = syncM
         // Synchronize the actors so we don't fuck
         // tons of things up
         actors.synchronized {
@@ -60,46 +55,28 @@ abstract class ClientGame(host: String) extends ClientState(host) {
             actors.takeFrom(newActors)
             // Update with the difference between when
             // the frame was sent and when we get it
-            microSequence(currentFrame - newFrame)
+            microSequence(Time(curFrame, millisSinceUpdate).toMillis - time.toMillis)
 
             // Apply the messages that we had but didn't
             // get a chance to
-            applyMessages(newFrame)
+            applyMessages(time)
         }
+        millisSinceUpdate = 0
     }
 
     /**
      * The main game loop mostly just calls an inlined
      * microSequence with a deltaT
      */
-    private[this]
-    def loop() {
+
+    protected def loop()(implicit rate: FrameRate) {
         var lastTime = 0L
         while (running) {
             val curTime = System.currentTimeMillis()
             val delta = curTime - lastTime
             microSequence(delta)
-            currentFrame = currentFrame + delta
+            millisSinceUpdate = millisSinceUpdate + delta
             lastTime = curTime
         }
-    }
-
-    /**
-     * Starts the game loop
-     */
-    def start() {
-        if (!alreadyInit) {
-            init()
-            alreadyInit = true
-        }
-        running = true
-        loop()
-    }
-
-    /**
-     * Stops the game loop
-     */
-    def stop() {
-        running = false
     }
 }
