@@ -7,8 +7,6 @@ abstract class ClientGame(host: String) extends ClientState(host) with Game {
     var curFrame = 0
     var millisSinceUpdate = 0L
 
-    def render()
-
     toServer.messagePublisher.observe {
         case m: SyncMessage => onStateUpdate(m)
         case _ =>
@@ -29,14 +27,12 @@ abstract class ClientGame(host: String) extends ClientState(host) with Game {
      * @param deltaT
      */
     @inline
-    private[this]
     def microSequence(deltaT: Long) {
         actors.synchronized{
             runUpdates(deltaT)
             update(deltaT)
             stepPhysics(deltaT)
             sendMessages()
-            render()
         }
     }
 

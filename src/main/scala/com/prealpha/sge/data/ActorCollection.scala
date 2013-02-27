@@ -23,7 +23,7 @@ class ActorCollection extends mutable.Iterable[Entity] with Serializable {
      * has gone terribly wrong, but we will try to agree with the definitive source
      * @param entity The entity to add
      */
-    def add(entity: Entity): Entity = {
+    def add[E <: Entity](entity: E): E = {
         val key = entity.id
         if (actorset.contains(key)) {
             log.error(f"actorset already contains key: ${key} for object ${entity.getClass.getSimpleName}.  " +

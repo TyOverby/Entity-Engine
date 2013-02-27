@@ -26,6 +26,7 @@ class CreateMessage(val entity: Entity, val frame: Time) extends Message
  */
 trait HandshakeMessage extends Message
 case object GoodbyeMessage extends HandshakeMessage
+case object ReceivedMessage extends HandshakeMessage
 
 /**
  * Used to sync an entire ActorCollection
