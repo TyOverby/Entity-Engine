@@ -7,36 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9336124d-7cdd-4037-8810-eadb611f60ae" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\.design.aztec.swp" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\data\ActorCollection.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\data\QuadTree.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\entity\Component.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\entity\ComponentCap.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\entity\Entity.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\entity\HelloComponent.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\entity\WorldComponent.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logging\Logger.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logging\package.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logic\FrameRate.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logic\GameState.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logic\game\ClientGame.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logic\game\Game.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\logic\game\ServerGame.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\messages\Message.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\AbstractConnectionThread.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\Emmiter.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\HandShake.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\Listener.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\client\ToServerConnection.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\server\ConnectionPool.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\src\com\prealpha\sge\networking\server\ToUserConnection.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\test\com\prealpha\sge\networking\BlockingWaitTest.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\test\com\prealpha\sge\networking\ConnectionPoolStopTest.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\test\com\prealpha\sge\networking\EmmiterTest.scala" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Ty\workspace\Personal\Scala\ScalaGE\test\com\prealpha\sge\networking\ServerNetworkTest.scala" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockUnapplyTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockUnapplyTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala" />
     </list>
     <ignored path="ScalaGE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,13 +161,13 @@
     <file path="$USER_HOME$/.ivy2/local/com.prealpha/scala_ge_2.10/0.1-SNAPSHOT/jars/scala_ge_2.10.jar!/com/prealpha/sge/networking/server/ConnectionPool.class" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361759972117" ignored="false" />
     <file path="$USER_HOME$/.ivy2/local/com.prealpha/scala_ge_2.10/0.1-SNAPSHOT/jars/scala_ge_2.10.jar!/com/prealpha/sge/logic/game/ServerGame.class" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361759972117" ignored="false" />
     <file path="$USER_HOME$/.ivy2/local/com.prealpha/scala_ge_2.10/0.1-SNAPSHOT/jars/scala_ge_2.10.jar!/com/prealpha/sge/logic/ServerState.class" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361759972117" ignored="false" />
-    <file path="/HandshakeGenerator.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361843938386" ignored="false" />
+    <file path="/HandshakeGenerator.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361943007204" ignored="false" />
     <file path="/MessagePassingTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361845113085" ignored="false" />
     <file path="/ServerConnection.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361846049925" ignored="false" />
     <file path="/Client.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361926244254" ignored="false" />
     <file path="/Server.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361926757608" ignored="false" />
     <file path="/MasterServer.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361923742972" ignored="false" />
-    <file path="/BlockUnapplyTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361937237147" ignored="false" />
+    <file path="/BlockUnapplyTest.scala" changelist="9336124d-7cdd-4037-8810-eadb611f60ae" time="1361943751823" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,12 +230,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="HandshakeGenerator.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="2" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#37#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BlockUnapplyTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockUnapplyTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="35" selection-start="895" selection-end="895" vertical-scroll-proportion="0.7702703">
+            <state line="31" column="73" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.8902027">
               <folding>
                 <element signature="e#61#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockingWaitTest.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockingWaitTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#61#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractConnectionThread.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/AbstractConnectionThread.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="0" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Emmiter.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/Emmiter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="32" selection-start="2895" selection-end="2913" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#37#78#0" expanded="true" />
+                <element signature="e#2109#2177#0" expanded="false" />
+                <element signature="e#2290#2367#0" expanded="false" />
+                <element signature="e#2484#2581#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -289,7 +306,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/data/ActorCollection.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/BlockingWaitTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/server/ServerConnection.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/ServerConnection.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/ServerConnection.scala" />
@@ -302,6 +318,7 @@
         <option value="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockingWaitTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/messages/Message.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/Emmiter.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockUnapplyTest.scala" />
       </list>
     </option>
@@ -488,40 +505,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="networking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScalaGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ScalaGE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -740,9 +723,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.BlockUnapplyTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BlockingWaitTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ServerNetworkTestTemplate" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Tester" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Tester" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BlockingWaitTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ServerNetworkTestTemplate" />
         <item index="4" class="java.lang.String" itemvalue="Application.BlockingWaitTest" />
       </list>
     </recent_temporary>
@@ -885,27 +868,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/AbstractConnectionThread.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="8" selection-start="1894" selection-end="1927" vertical-scroll-proportion="0.33204633">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/ConnectionPoolStopTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="57" selection-start="206" selection-end="206" vertical-scroll-proportion="0.1969112">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/Client.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.22972973">
-          <folding>
-            <element signature="e#48#107#0" expanded="true" />
-            <element signature="docComment;class#169:558" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,15 +880,6 @@
         <state line="13" column="39" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#48#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockingWaitTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="0.26254827">
-          <folding>
-            <element signature="e#61#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -942,13 +899,6 @@
           <folding>
             <element signature="e#48#70#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="388" selection-end="388" vertical-scroll-proportion="-0.115830116">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,9 +923,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/Client.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="296" selection-end="296" vertical-scroll-proportion="0.14994487">
+          <folding>
+            <element signature="e#48#107#0" expanded="true" />
+            <element signature="docComment;class#169:558" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/Emmiter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="32" selection-start="2895" selection-end="2913" vertical-scroll-proportion="1.3445946">
+        <state line="107" column="32" selection-start="2895" selection-end="2913" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#37#78#0" expanded="true" />
             <element signature="e#2109#2177#0" expanded="false" />
@@ -985,9 +945,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/HandshakeGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="2" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#37#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockingWaitTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="52" selection-start="303" selection-end="303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#61#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/prealpha/sge/networking/AbstractConnectionThread.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/prealpha/sge/networking/networking/messagetests/BlockUnapplyTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="35" selection-start="895" selection-end="895" vertical-scroll-proportion="0.7702703">
+        <state line="31" column="73" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.8902027">
           <folding>
             <element signature="e#61#83#0" expanded="true" />
           </folding>
